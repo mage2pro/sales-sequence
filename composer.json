@@ -1,6 +1,6 @@
 {
 	"name": "dfe/sales-sequence"
-	,"description": "The «Custom Order Number» extension."
+	,"description": "The «Sales Documents Numeration» extension."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/t/512"
 	,"license": "proprietary"
