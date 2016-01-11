@@ -1,7 +1,6 @@
 .config .handsontable.Dfe_SalesSequence-Matrix {
-	col.rowHeader {width: 8em;}
-	//th, td {vertical-align: middle;}
-	td {padding: 0 4px 0 4px;}
+	col.rowHeader {width: 11em;}
+	td {padding: 2px 4px;}
 	> .ht_clone_top {
 		.wtHider {width: auto !important;}
 	}
@@ -10,9 +9,13 @@
 	> .ht_clone_left {
 		//width: auto !important;
 		th {
-			//vertical-align: middle;
-			//padding-left: 0.5em;
-			//padding-right: 0.5em;
+			// 2016-01-11
+			// Указание className: 'htMiddle' недостаточно:
+			// для колонки заголовков вертикальное выравнивание нужно задавать отдельно.
+			vertical-align: middle;
+			text-align: right;
+			// http://stackoverflow.com/a/18628052
+			word-wrap: break-word;
 		}
 	}
 }
