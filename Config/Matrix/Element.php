@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\SalesSequence\Config;
+namespace Dfe\SalesSequence\Config\Matrix;
 use Df\Framework\Data\Form\Element\Hidden;
-class Matrix extends Hidden {
+class Element extends Hidden {
 	/**
 	 * 2016-01-10
 	 * @override
@@ -10,7 +10,6 @@ class Matrix extends Hidden {
 	 * @return void
 	 */
 	public function onFormInitialized() {
-		$this['value'] = df_json_encode($this->nextNumbers());
 		df_fe_init($this, __CLASS__, 'Df_Core::lib/Handsontable/main.css', [
 			'columns' => array_keys(df_sales_entity_types())
 			// 2016-01-11
@@ -20,17 +19,5 @@ class Matrix extends Hidden {
 			// http://docs.handsontable.com/0.20.2/Options.html#rowHeaders
 			,'rows' => array_values(df_store_names())
 		]);
-	}
-
-	/**
-	 * 2016-01-11
-	 * @return int[][]
-	 */
-	private function nextNumbers() {
-		return array_map(function($storeId) {
-			return array_values(array_map(function($entityTypeId) use ($storeId) {
-				return df_sales_seq_next($entityTypeId, $storeId);
-			}, df_sales_entity_types()));
-		}, df_store_ids());
 	}
 }
