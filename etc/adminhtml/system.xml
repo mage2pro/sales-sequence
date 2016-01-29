@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <config
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='urn:magento:module:Magento_Config:etc/system_file.xsd'
+    xsi:noNamespaceSchemaLocation='urn:magento:module:Df_Config:etc/system_file.xsd'
 >
     <system>
         <tab id='_df' translate='label' sortOrder='-100'>
@@ -52,10 +52,41 @@
                     <comment><![CDATA[Enable the «<a href='https://mage2.pro/t/512'>Sales Documents Numeration</a>» extension?]]></comment>
                 </field>
 				<field
+					id='pad'
+					translate='label'
+					type='Df\Framework\Data\Form\Element\Checkbox'
+					sortOrder='2'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Pad Numbers with Leading Zeros?</label>
+			<backend_model>Df\Config\Backend\Checkbox</backend_model>
+					<comment><![CDATA[If enabled, the number <code>2189</code> will be rendered as <code>000002189</code>.]]></comment>
+				</field>
+				<field
+					id='pad_length'
+					translate='label'
+					type='Df\Framework\Data\Form\Element\Select\Integer'
+					dfMax='10'
+					dfMin='1'
+					sortOrder='3'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Numbers Length</label>
+					<comment><![CDATA[The minimum number of digits to display in the increment part of a sales document's number.<br/>The increment part is a document number without a prefix and suffix.<br/>A sales document's number will be padded with the leading zeros to the specified length.<br/>The default length is <code>9</code>, so the number <code>2189</code> is rendered as <code>000002189</code><br/>(<code>4</code> significant digits and <code>9 - 4 = 5</code> leading zeros).]]></comment>
+					<depends>
+						<field id='enable'>1</field>
+						<field id='pad'>1</field>
+					</depends>
+				</field>
+				<field
 					id='next'
                     type='Dfe\SalesSequence\Config\Matrix\Element'
 					translate='label'
-					sortOrder='2'
+					sortOrder='4'
 					showInDefault='1'
 					showInWebsite='0'
 					showInStore='0'
