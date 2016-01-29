@@ -8,7 +8,7 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 	 */
 	function(config) {
 		var $element = $(document.getElementById(config.id));
-		var $container = $('<div class="Dfe_SalesSequence-Next"/>');
+		var $container = $('<div class="Dfe_SalesSequence-Matrix"/>');
 		$element.after($container);
 		var $table = new Handsontable($container.get(0), {
 			cell: []
@@ -34,10 +34,13 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 						 	,["7","999","9"]
 						 	,["88888",null,null]
 						 ]
-						 * Когда мы создаём пустой массив, приходится делать хотя бы одну строку,
-						 * иначе Handsontable работает некорректно.
 						 */
-						result = [new Array(config.columns.length)];
+						var numRows = config.rows.length;
+						var numColumns = config.columns.length;
+						result = new Array(numRows);
+						for (var rowIndex = 0; rowIndex < numRows; rowIndex++) {
+							result[rowIndex] = new Array(numColumns);
+						}
 					}
 					return result;
 				}()

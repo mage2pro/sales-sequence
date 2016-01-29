@@ -84,10 +84,23 @@
 					</depends>
 				</field>
 				<field
+					id='affix'
+                    type='Dfe\SalesSequence\Config\Affix\Element'
+					translate='label'
+					sortOrder='4'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label><![CDATA[Prefix & Suffix]]></label>
+					<comment><![CDATA[]]></comment>
+                    <depends><field id='enable'>1</field></depends>
+				</field>
+				<field
 					id='next'
                     type='Dfe\SalesSequence\Config\Next\Element'
 					translate='label'
-					sortOrder='4'
+					sortOrder='5'
 					showInDefault='1'
 					showInWebsite='0'
 					showInStore='0'
