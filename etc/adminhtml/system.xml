@@ -52,7 +52,7 @@
                     <comment><![CDATA[Enable the «<a href='https://mage2.pro/t/512'>Sales Documents Numeration</a>» extension?]]></comment>
                 </field>
 				<field
-					id='pad'
+					id='needPad'
 					translate='label'
 					type='Df\Framework\Data\Form\Element\Checkbox'
 					sortOrder='2'
@@ -66,7 +66,7 @@
 					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
-					id='pad_length'
+					id='padLength'
 					translate='label'
 					type='Df\Framework\Data\Form\Element\Select\Integer'
 					dfMax='10'
@@ -80,7 +80,7 @@
 					<comment><![CDATA[The minimum number of digits to display in the increment part of a sales document's number.<br/>The increment part is a document number without a prefix and suffix.<br/>A sales document's number will be padded with the leading zeros to the specified length.<br/>The default length is <code>9</code>, so the number <code>2189</code> is rendered as <code>000002189</code><br/>(<code>4</code> significant digits and <code>9 - 4 = 5</code> leading zeros).]]></comment>
 					<depends>
 						<field id='enable'>1</field>
-						<field id='pad'>1</field>
+						<field id='needPad'>1</field>
 					</depends>
 				</field>
 				<field

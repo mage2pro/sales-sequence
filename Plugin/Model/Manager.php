@@ -22,15 +22,17 @@ class Manager extends Sb {
 	 * @return \Magento\Framework\DB\Sequence\SequenceInterface
 	 */
 	public function aroundGetSequence(Sb $sb, \Closure $proceed, $entityType, $storeId) {
-		return
-			!S::s()->enable($storeId)
-			? $proceed($entityType, $storeId)
-			: $this->sequenceFactory->create([
-				'meta' => $this->resourceSequenceMeta->loadByEntityTypeAndStore(
-					$entityType, $storeId, $this->pattern($storeId)
-				)
-			])
-		;
+		/** @var \Magento\Framework\DB\Sequence\SequenceInterface $result */
+		if (!S::s()->enable($storeId)) {
+			$result = $proceed($entityType, $storeId);
+		}
+		else {
+			$result = df_create(Sequence::class, [
+				'meta' => df_sales_seq_meta($entityType, $storeId)
+				,'pattern' => $this->pattern($storeId)
+			]);
+		}
+		return $result;
 	}
 
 	/**

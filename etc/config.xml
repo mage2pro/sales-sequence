@@ -7,8 +7,8 @@
         <df_sales>
             <documents_numeration>
                 <enable>0</enable>
-                <pad>1</pad>
-				<pad_length>9</pad_length>
+                <needPad>1</needPad>
+				<padLength>9</padLength>
             </documents_numeration>
         </df_sales>
     </default>
