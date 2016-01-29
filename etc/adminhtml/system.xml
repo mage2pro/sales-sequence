@@ -63,6 +63,7 @@
 					<label>Pad Numbers with Leading Zeros?</label>
 			<backend_model>Df\Config\Backend\Checkbox</backend_model>
 					<comment><![CDATA[If enabled, the number <code>2189</code> will be rendered as <code>000002189</code>.]]></comment>
+					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
 					id='pad_length'

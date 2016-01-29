@@ -11,10 +11,7 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 		var $container = $('<div class="Dfe_SalesSequence-Matrix"/>');
 		$element.after($container);
 		var $table = new Handsontable($container.get(0), {
-			cell: [
-				//{row: 1, col: 0, className: 'htCenter htMiddle'}
-				//,{row: 1, col: 1, className: 'htCenter htMiddle'}
-			]
+			cell: []
 			,data:
 				/** @returns {Array} */
 				function() {
@@ -75,6 +72,22 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 				this.selection.refreshBorders(null, true);
 			}
 		});
+		/**
+		 * 2016-01-29
+		 * Если таблица изначально не видна,
+		 * то после её показа простановкой галки «Enable?»
+		 * она всё равно почему-то остаётся невидимой.
+		 * Исправляем это.
+		 * https://github.com/magento/magento2/blob/720667e/lib/web/mage/adminhtml/form.js#L431
+		 */
+		(function() {
+			var row = document.getElementById('row_' + config.id);
+			var show = row.show;
+			row.show = function() {
+				show.call(this);
+				$table.runHooks('afterChange');
+			};
+		})();
 		(function() {
 			/** @type {jQuery} HTMLFormElement */
 			var $form = $element.closest('form');
