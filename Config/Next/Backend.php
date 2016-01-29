@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\SalesSequence\Config\Matrix;
+namespace Dfe\SalesSequence\Config\Next;
 use Df\Config\Backend\Unusial\Model;
 use Df\Config\Backend as _Backend;
 /**

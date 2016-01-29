@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\SalesSequence\Config\Matrix;
+namespace Dfe\SalesSequence\Config\Next;
 use Df\Framework\Data\Form\Element\Hidden;
 class Element extends Hidden {
 	/**

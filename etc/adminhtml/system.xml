@@ -85,7 +85,7 @@
 				</field>
 				<field
 					id='next'
-                    type='Dfe\SalesSequence\Config\Matrix\Element'
+                    type='Dfe\SalesSequence\Config\Next\Element'
 					translate='label'
 					sortOrder='4'
 					showInDefault='1'
@@ -94,7 +94,7 @@
 				>
 					<label>Next Numbers</label>
 					<comment><![CDATA[]]></comment>
-					<backend_model>Dfe\SalesSequence\Config\Matrix\Backend</backend_model>
+					<backend_model>Dfe\SalesSequence\Config\Next\Backend</backend_model>
                     <depends><field id='enable'>1</field></depends>
 				</field>
             </group>

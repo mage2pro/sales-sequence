@@ -8,7 +8,7 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 	 */
 	function(config) {
 		var $element = $(document.getElementById(config.id));
-		var $container = $('<div class="Dfe_SalesSequence-Matrix"/>');
+		var $container = $('<div class="Dfe_SalesSequence-Next"/>');
 		$element.after($container);
 		var $table = new Handsontable($container.get(0), {
 			cell: []
