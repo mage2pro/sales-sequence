@@ -93,7 +93,26 @@
 					showInStore='1'
 				>
 					<label><![CDATA[Prefix & Suffix]]></label>
-					<comment><![CDATA[]]></comment>
+					<comment><![CDATA[You can use the following variables in a prefix/suffix: <table class='df-note df-definition'><tbody>
+		<tr>
+			<td>{STORE-ID}</td>
+			<td>It will be replaced with the store's ID.</td>
+		</tr>
+		<tr>
+			<td>{STORE-CODE}</td>
+			<td>It will be replaced with the store's code.</td>
+		</tr>
+		<tr>
+			<td>{a date expression}</td>
+			<td>It will be replaced with the current date.
+			<br/>Use any expression supported by <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP <code>date()</code></a> function.
+			<br/>Examples:
+            <br/>{y-m} => <i>16-01</i>
+			<br/>{Y-m} => <i>2016-01</i>
+		  	<br/>{Y-M} => <i>2016-Jan</i>
+			</td>
+		</tr>
+</tbody></table>]]></comment>
                     <depends><field id='enable'>1</field></depends>
 				</field>
 				<field
