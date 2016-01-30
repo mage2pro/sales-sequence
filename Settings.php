@@ -4,6 +4,18 @@ use Magento\Framework\App\ScopeInterface;
 class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
+	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
+	 * @param string $type
+	 * @param int $affixId
+	 * @param null|string|int|ScopeInterface $scope [optional]
+	 * @return string
+	 */
+	public function affix($type, $affixId, $scope = null) {
+		return df_nts($this->_matrix(__FUNCTION__, df_sales_entity_type_index($type), $affixId, $scope));
+	}
+
+	/**
+	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Enable?»
 	 * @param null|string|int|ScopeInterface $scope [optional]
 	 * @return bool
@@ -32,6 +44,19 @@ class Settings extends \Df\Core\Settings {
 	 * @return string
 	 */
 	protected function prefix() {return 'df_sales/documents_numeration/';}
+
+	/**
+	 * 2016-01-30
+	 * @used-by \Dfe\SalesSequence\Settings::affix()
+	 * @used-by \Dfe\SalesSequence\Plugin\Model\Manager::pattern()
+	 */
+	const PREFIX = 0;
+	/**
+	 * 2016-01-30
+	 * @used-by \Dfe\SalesSequence\Settings::affix()
+	 * @used-by \Dfe\SalesSequence\Plugin\Model\Manager::pattern()
+	 */
+	const SUFFIX = 1;
 
 	/** @return $this */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
