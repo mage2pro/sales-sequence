@@ -12,5 +12,5 @@
 			name='Dfe\SalesSequence\Plugin\Model\Manager'
 			type='Dfe\SalesSequence\Plugin\Model\Manager'
 		/>
- </type>
+	</type>
 </config>
