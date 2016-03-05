@@ -24,9 +24,7 @@ class Backend extends Model {
 	 * @see \Df\Config\Backend\Unusial\Model::delete()
 	 * @return $this
 	 */
-	public function delete() {
-		return $this;
-	}
+	public function delete() {return $this;}
 
 	/**
 	 * 2016-01-11
