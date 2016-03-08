@@ -42,7 +42,7 @@ class Manager extends Sb {
 		/** @var string[] $variables */
 		$variables = ['STORE-ID' => $this->storeId, 'STORE-CODE' => df_store_code($this->storeId)];
 		return preg_replace_callback('#\{([^\}]*)\}#ui', function($matches) use ($variables) {
-			return date(strtr(df_a($matches, 1, ''), $variables));
+			return date(strtr(dfa($matches, 1, ''), $variables));
 		}, S::s()->affix($this->type, $affixId, $this->storeId));
 	}
 
