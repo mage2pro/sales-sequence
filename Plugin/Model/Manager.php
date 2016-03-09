@@ -39,11 +39,9 @@ class Manager extends Sb {
 	 * @return string
 	 */
 	private function affix($affixId) {
-		/** @var string[] $variables */
-		$variables = ['STORE-ID' => $this->storeId, 'STORE-CODE' => df_store_code($this->storeId)];
-		return preg_replace_callback('#\{([^\}]*)\}#ui', function($matches) use ($variables) {
-			return date(strtr(dfa($matches, 1, ''), $variables));
-		}, S::s()->affix($this->type, $affixId, $this->storeId));
+		return df_var(S::s()->affix($this->type, $affixId, $this->storeId), [
+			'STORE-ID' => $this->storeId, 'STORE-CODE' => df_store_code($this->storeId)
+		]);
 	}
 
 	/**
