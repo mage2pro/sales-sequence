@@ -58,6 +58,6 @@ class Settings extends \Df\Core\Settings {
 	 */
 	const SUFFIX = 1;
 
-	/** @return $this */
+	/** @return self */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
 }
