@@ -1,13 +1,13 @@
 <?php
 namespace Dfe\SalesSequence;
-use Magento\Framework\App\ScopeInterface;
+use Magento\Framework\App\ScopeInterface as S;
 class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
 	 * @param string $type
 	 * @param int $affixId
-	 * @param null|string|int|ScopeInterface $scope [optional]
+	 * @param null|string|int|S $scope [optional]
 	 * @return string
 	 */
 	public function affix($type, $affixId, $scope = null) {
@@ -17,7 +17,7 @@ class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Enable?»
-	 * @param null|string|int|ScopeInterface $scope [optional]
+	 * @param null|string|int|S $scope [optional]
 	 * @return bool
 	 */
 	public function enable($scope = null) {return $this->b(__FUNCTION__, $scope);}
@@ -25,7 +25,7 @@ class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Pad Numbers with Leading Zeros?»
-	 * @param null|string|int|ScopeInterface $scope [optional]
+	 * @param null|string|int|S $scope [optional]
 	 * @return bool
 	 */
 	public function needPad($scope = null) {return $this->b(__FUNCTION__, $scope);}
@@ -33,7 +33,7 @@ class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
-	 * @param null|string|int|ScopeInterface $scope [optional]
+	 * @param null|string|int|S $scope [optional]
 	 * @return int
 	 */
 	public function padLength($scope = null) {return $this->i(__FUNCTION__, $scope);}
