@@ -23,7 +23,7 @@
                 <field
                     id='enable'
                     translate='label'
-                    type='Df\Framework\Data\Form\Element\Checkbox'
+                    type='Df\Framework\Form\Element\Checkbox'
                     sortOrder='1'
 					showInDefault='1'
 					showInWebsite='1'
@@ -36,7 +36,7 @@
 				<field
 					id='needPad'
 					translate='label'
-					type='Df\Framework\Data\Form\Element\Checkbox'
+					type='Df\Framework\Form\Element\Checkbox'
 					sortOrder='2'
 					showInDefault='1'
 					showInWebsite='1'
@@ -50,7 +50,7 @@
 				<field
 					id='padLength'
 					translate='label'
-					type='Df\Framework\Data\Form\Element\Select\Integer'
+					type='Df\Framework\Form\Element\Select\Integer'
 					dfMax='10'
 					dfMin='1'
 					sortOrder='3'
