@@ -13,4 +13,9 @@
 			type='Dfe\SalesSequence\Plugin\Model\Manager'
 		/>
 	</type>
+	<virtualType name='Dfe\SalesSequence\Ext' type='Df\Config\Ext'>
+		<arguments>
+			<argument name='name' xsi:type='string'>mage2pro/sales-sequence</argument>
+		</arguments>
+	</virtualType>
 </config>

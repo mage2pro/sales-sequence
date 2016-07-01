@@ -20,6 +20,8 @@
                 showInStore='1'
             >
                 <label>Documents Numeration</label>
+				<dfExtension>Dfe\SalesSequence\Ext</dfExtension>
+				<frontend_model>Df\Config\Block\System\Config\Form\Fieldset\Ext</frontend_model>
                 <field
                     id='enable'
                     translate='label'
