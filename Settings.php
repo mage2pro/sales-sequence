@@ -1,6 +1,7 @@
 <?php
 namespace Dfe\SalesSequence;
 use Magento\Framework\App\ScopeInterface as S;
+/** @method static Settings s() */
 class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
@@ -57,7 +58,4 @@ class Settings extends \Df\Core\Settings {
 	 * @used-by \Dfe\SalesSequence\Plugin\Model\Manager::pattern()
 	 */
 	const SUFFIX = 1;
-
-	/** @return self */
-	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
 }
