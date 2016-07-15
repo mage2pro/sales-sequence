@@ -77,7 +77,7 @@
 					showInStore='1'
 				>
 					<label><![CDATA[Prefix & Suffix]]></label>
-					<comment><![CDATA[You can use the following variables in a prefix/suffix: <table class='df-note df-definition'><tbody>
+					<comment><![CDATA[You can use the following variables in a prefix/suffix: <table class='df-note'><tbody>
 		<tr>
 			<td>{STORE-ID}</td>
 			<td>It will be replaced with the store's ID.</td>
