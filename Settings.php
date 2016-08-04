@@ -17,14 +17,6 @@ class Settings extends \Df\Core\Settings {
 
 	/**
 	 * 2016-01-29
-	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Enable?»
-	 * @param null|string|int|S $scope [optional]
-	 * @return bool
-	 */
-	public function enable($scope = null) {return $this->b(__FUNCTION__, $scope);}
-
-	/**
-	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Pad Numbers with Leading Zeros?»
 	 * @param null|string|int|S $scope [optional]
 	 * @return bool
@@ -41,6 +33,7 @@ class Settings extends \Df\Core\Settings {
 
 	/**
 	 * @override
+	 * @see \Df\Core\Settings::prefix()
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
