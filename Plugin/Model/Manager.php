@@ -41,7 +41,7 @@ class Manager extends Sb {
 	private function affix($affixId) {
 		return df_var(S::s()->affix($this->type, $affixId, $this->storeId), [
 			'STORE-ID' => $this->storeId, 'STORE-CODE' => df_store_code($this->storeId)
-		]);
+		], function($variable) {return date($variable);});
 	}
 
 	/**
