@@ -8,28 +8,28 @@ class Settings extends \Df\Core\Settings {
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
 	 * @param string $type
 	 * @param int $affixId
-	 * @param null|string|int|S $scope [optional]
+	 * @param null|string|int|S $s [optional]
 	 * @return string
 	 */
-	public function affix($type, $affixId, $scope = null) {
-		return df_nts($this->_matrix(__FUNCTION__, df_sales_entity_type_index($type), $affixId, $scope));
+	public function affix($type, $affixId, $s = null) {
+		return df_nts($this->_matrix(df_sales_entity_type_index($type), $affixId, __FUNCTION__, $s));
 	}
 
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Pad Numbers with Leading Zeros?»
-	 * @param null|string|int|S $scope [optional]
+	 * @param null|string|int|S $s [optional]
 	 * @return bool
 	 */
-	public function needPad($scope = null) {return $this->b(__FUNCTION__, $scope);}
+	public function needPad($s = null) {return $this->b(null, $s);}
 
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
-	 * @param null|string|int|S $scope [optional]
+	 * @param null|string|int|S $s [optional]
 	 * @return int
 	 */
-	public function padLength($scope = null) {return $this->i(__FUNCTION__, $scope);}
+	public function padLength($s = null) {return $this->i(null, $s);}
 
 	/**
 	 * @override
