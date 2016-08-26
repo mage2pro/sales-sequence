@@ -2,7 +2,7 @@
 namespace Dfe\SalesSequence;
 use Magento\Framework\App\ScopeInterface as S;
 /** @method static Settings s() */
-class Settings extends \Df\Core\Settings {
+final class Settings extends \Df\Core\Settings {
 	/**
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
