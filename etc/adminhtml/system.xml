@@ -1,40 +1,40 @@
 <?xml version='1.0'?>
 <config
-    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='urn:magento:module:Df_Config:etc/system_file.xsd'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:module:Df_Config:etc/system_file.xsd'
 >
-    <system>
-        <section id='df_sales'>
-            <!--
-                2015-09-25
-                Первые 2 цифры sortOrder соответствуют порядковому номеру первой буквы модуля
-                в английском алфавите: https://en.wikipedia.org/wiki/English_alphabet
-            -->
-            <group
-                id='documents_numeration'
-                translate='label'
-                type='text'
-                sortOrder='13'
-                showInDefault='1'
-                showInWebsite='1'
-                showInStore='1'
-            >
-                <label>Documents Numeration</label>
+	<system>
+		<section id='df_sales'>
+<!--
+2015-09-25
+Первые 2 цифры sortOrder соответствуют порядковому номеру первой буквы модуля
+в английском алфавите: https://en.wikipedia.org/wiki/English_alphabet
+-->
+			<group
+				id='documents_numeration'
+				translate='label'
+				type='text'
+				sortOrder='13'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label>Documents Numeration</label>
 				<dfExtension>Dfe\SalesSequence\Ext</dfExtension>
 				<frontend_model>Df\Config\Block\System\Config\Form\Fieldset\Ext</frontend_model>
-                <field
-                    id='enable'
-                    translate='label'
-                    type='Df\Framework\Form\Element\Checkbox'
-                    sortOrder='1'
+				<field
+					id='enable'
+					translate='label'
+					type='Df\Framework\Form\Element\Checkbox'
+					sortOrder='1'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
-                >
-                    <label>Enable?</label>
+				>
+					<label>Enable?</label>
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
-                    <comment><![CDATA[Enable the «<a href='https://mage2.pro/t/512'>Sales Documents Numeration</a>» extension?]]></comment>
-                </field>
+					<comment><![CDATA[Enable the «<a href='https://mage2.pro/t/512'>Sales Documents Numeration</a>» extension?]]></comment>
+				</field>
 				<field
 					id='needPad'
 					translate='label'
@@ -69,7 +69,7 @@
 				</field>
 				<field
 					id='affix'
-                    type='Dfe\SalesSequence\Config\Affix\Element'
+					type='Dfe\SalesSequence\Config\Affix\Element'
 					translate='label'
 					sortOrder='4'
 					showInDefault='1'
@@ -91,17 +91,17 @@
 			<td>It will be replaced with the current date.
 			<br/>Use any expression supported by <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP <code>date()</code></a> function.
 			<br/>Examples:
-            <br/>{y-m} => <i>16-01</i>
+			<br/>{y-m} => <i>16-01</i>
 			<br/>{Y-m} => <i>2016-01</i>
-		  	<br/>{Y-M} => <i>2016-Jan</i>
+			<br/>{Y-M} => <i>2016-Jan</i>
 			</td>
 		</tr>
 </tbody></table>]]></comment>
-                    <depends><field id='enable'>1</field></depends>
+					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
 					id='next'
-                    type='Dfe\SalesSequence\Config\Next\Element'
+					type='Dfe\SalesSequence\Config\Next\Element'
 					translate='label'
 					sortOrder='5'
 					showInDefault='1'
@@ -111,9 +111,9 @@
 					<label>Next Numbers</label>
 					<comment><![CDATA[]]></comment>
 					<backend_model>Dfe\SalesSequence\Config\Next\Backend</backend_model>
-                    <depends><field id='enable'>1</field></depends>
+					<depends><field id='enable'>1</field></depends>
 				</field>
-            </group>
-        </section>
-    </system>
+			</group>
+		</section>
+	</system>
 </config>
