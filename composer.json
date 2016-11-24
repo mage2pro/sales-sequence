@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/sales-sequence"
-	,"version": "1.0.7"
+	,"version": "1.0.8"
 	,"description": "The «Sales Documents Numeration» extension."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/t/512"
@@ -11,6 +11,6 @@
 		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
 		"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": "^1.8.10"}
+	,"require": {"mage2pro/core": "^1.9.21"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\SalesSequence\\": ""}}
 }
