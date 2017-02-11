@@ -13,7 +13,7 @@ class Backend extends Model {
 	 * @see \Df\Config\Backend\Unusial\Model::afterLoad()
 	 * @return $this
 	 */
-	public function afterLoad() {
+	function afterLoad() {
 		$this->setValue(df_json_encode($this->nextNumbersFromDb()));
 		return $this;
 	}
@@ -24,7 +24,7 @@ class Backend extends Model {
 	 * @see \Df\Config\Backend\Unusial\Model::delete()
 	 * @return $this
 	 */
-	public function delete() {return $this;}
+	function delete() {return $this;}
 
 	/**
 	 * 2016-01-11
@@ -38,7 +38,7 @@ class Backend extends Model {
 	 * @used-by \Df\Config\Backend\Unusial\Model::save()
 	 * @return $this
 	 */
-	public function afterCommitCallback() {
+	function afterCommitCallback() {
 		/** @var int[][] $valuesFromUi */
 		$valuesFromUi = df_json_decode($this->getValue());
 		/** @var int[][] $valuesFromDb */

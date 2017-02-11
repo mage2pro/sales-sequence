@@ -21,7 +21,7 @@ abstract class Element extends Hidden {
 	 * @used-by \Df\Framework\Plugin\Data\Form\Element\AbstractElement::afterSetForm()
 	 * @return void
 	 */
-	public function onFormInitialized() {
+	function onFormInitialized() {
 		df_fe_init($this, __CLASS__, df_asset_third_party('Handsontable/main.css'), [
 			'columns' => $this->columns(), 'rows' => $this->rows()
 		], 'matrix');

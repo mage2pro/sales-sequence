@@ -8,7 +8,7 @@ class Manager extends Sb {
 	 * 2016-01-29
 	 * Потрясающая техника.
 	 */
-	public function __construct() {}
+	function __construct() {}
 
 	/**
 	 * 2016-01-29
@@ -21,7 +21,7 @@ class Manager extends Sb {
 	 * @param int $storeId
 	 * @return \Magento\Framework\DB\Sequence\SequenceInterface
 	 */
-	public function aroundGetSequence(Sb $sb, \Closure $proceed, $entityType, $storeId) {
+	function aroundGetSequence(Sb $sb, \Closure $proceed, $entityType, $storeId) {
 		$this->type = $entityType;
 		$this->storeId = $storeId;
 		return

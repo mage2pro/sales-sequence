@@ -11,7 +11,7 @@ final class Settings extends \Df\Config\Settings {
 	 * @param null|string|int|S $s [optional]
 	 * @return string
 	 */
-	public function affix($type, $affixId, $s = null) {
+	function affix($type, $affixId, $s = null) {
 		return df_nts($this->_matrix(df_sales_entity_type_index($type), $affixId, __FUNCTION__, $s));
 	}
 
@@ -21,7 +21,7 @@ final class Settings extends \Df\Config\Settings {
 	 * @param null|string|int|S $s [optional]
 	 * @return bool
 	 */
-	public function needPad($s = null) {return $this->b(null, $s);}
+	function needPad($s = null) {return $this->b(null, $s);}
 
 	/**
 	 * 2016-01-29
@@ -29,7 +29,7 @@ final class Settings extends \Df\Config\Settings {
 	 * @param null|string|int|S $s [optional]
 	 * @return int
 	 */
-	public function padLength($s = null) {return $this->i(null, $s);}
+	function padLength($s = null) {return $this->i(null, $s);}
 
 	/**
 	 * @override
