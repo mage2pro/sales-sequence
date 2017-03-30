@@ -86,7 +86,6 @@ class Backend extends Model {
 	 * @param int $storeId
 	 * @param string $entityTypeCode
 	 * @param int $nextNumber
-	 * @return void
 	 */
 	private function updateNextNumber($storeId, $entityTypeCode, $nextNumber) {
 		/** @var string $table */
