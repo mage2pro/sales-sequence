@@ -16,18 +16,16 @@ class Manager extends Sb {
 	 * @see \Magento\SalesSequence\Model\Manager::getSequence()
 	 * https://github.com/magento/magento2/blob/720667e/app/code/Magento/SalesSequence/Model/Manager.php#L37-L54
 	 * @param Sb $sb
-	 * @param \Closure $proceed
+	 * @param \Closure $f
 	 * @param string $entityType
 	 * @param int $storeId
 	 * @return \Magento\Framework\DB\Sequence\SequenceInterface
 	 */
-	function aroundGetSequence(Sb $sb, \Closure $proceed, $entityType, $storeId) {
+	function aroundGetSequence(Sb $sb, \Closure $f, $entityType, $storeId) {
 		$this->type = $entityType;
 		$this->storeId = $storeId;
-		return
-			!S::s()->enable($storeId)
-			? $proceed($entityType, $storeId)
-			: df_om()->create(Sequence::class, [
+		return !S::s()->enable($storeId) ? $f($entityType, $storeId) :
+			df_om()->create(Sequence::class, [
 				'meta' => df_sales_seq_meta($entityType, $storeId), 'pattern' => $this->pattern()
 			])
 		;
