@@ -1,4 +1,4 @@
-The «[**Sales Documents Numeration**](https://mage2.pro/t/512)» extension for Magento 2 allows you to use a custom numeration for the sales documents: orders, invoices, shipments, and credit memos.
+The «[**Sales Documents Numeration**](https://mage2.pro/c/extensions/sales-documents-numeration)» extension for Magento 2 allows you to use a custom numeration for the sales documents: orders, invoices, shipments, and credit memos.
 
 [**Demo video**](https://www.youtube.com/watch?v=alcoJyoby1M).
 
@@ -36,12 +36,12 @@ If you have already bought the extension, then its installation is a **free serv
 Follow the generic [installation instruction](https://mage2.pro/t/263). 
 
 ## Support
-- [The extension's **forum** branch](https://mage2.pro/t/512).
+- [The extension's **forum** branch](https://mage2.pro/c/extensions/sales-documents-numeration).
 - [Where and how to report a Mage2.PRO extension's issue?](https://mage2.pro/t/2034)
 - I also provide a **[generic Magento 2 support](https://mage2.pro/t/topic/755)** and [Magento 2 installation service](https://mage2.pro/t/748).
 
 ## Want to be notified about the extension's updates?
-- [Subscribe](https://mage2.pro/t/2540) to the extension's [forum branch](https://mage2.pro/t/512).
+- [Subscribe](https://mage2.pro/t/2540) to the extension's [forum branch](https://mage2.pro/c/extensions/sales-documents-numeration).
 - Subscribe to my [Twitter](https://twitter.com/mage2_pro) and [YouTube](https://www.youtube.com/channel/UCvlDAZuj01_b92pzRi69LeQ) channels.
 
 ## Need a new feature?
@@ -66,7 +66,7 @@ I provide the [**customization service**](https://mage2.pro/t/2020) for my payme
 ## See also my other Magento 2 extensions:
 
 - «[**Price Format**](https://mage2.pro/c/extensions/price-format)» (set a custom display format for the prices and other currency values: discounts, taxes, sales amounts).
-- «[**Sales Documents Numeration**](https://mage2.pro/t/512)» (use a custom numeration for the sales documents: orders, invoices, shipments, and credit memos).
+- «[**Sales Documents Numeration**](https://mage2.pro/c/extensions/sales-documents-numeration)» (use a custom numeration for the sales documents: orders, invoices, shipments, and credit memos).
 - «[**Login with Amazon**](https://mage2.pro/c/extensions/amazon-login)» (a single sign-on extension). 
 - «[**Backend Login with Google Account**](https://mage2.pro/t/46)» (a single sign-on extension for the Magento 2 backend). 
 - «[**Facebook Login**](https://mage2.pro/c/extensions/facebook-login)» (a single sign-on extension).
