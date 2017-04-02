@@ -13,4 +13,15 @@
 	}]
 	,"require": {"mage2pro/core": ">=2.4.19"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\SalesSequence\\": ""}}
+	,"keywords": [
+		"eCommerce"
+		,"Invoice"
+		,"Magento"
+		,"Magento 2"
+		,"Magento extension"
+		,"Order"
+		,"Refund"
+		,"Sales document"
+		,"Shipment"
+	]
 }
