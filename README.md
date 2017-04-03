@@ -20,20 +20,26 @@ The «[**Sales Documents Numeration**](https://mage2.pro/c/extensions/sales-docu
 ### 5. Extension settings
 ![](https://mage2.pro/uploads/default/original/1X/2510f608780d4fb4f7c05f18c245f2ec695294b4.png)
 
-## Licensing
-It is a paid extension, not free.  
-You can use it for free for the testing puproses only.  
-Please read the [testing policy](https://mage2.pro/t/topic/2590) before installation.
-
 ## How to buy
 You can buy it with PayPal [here](https://mage2.pro/t/512).  
 
-## Installation
-### Free installation service
-If you have already bought the extension, then its installation is a **free service** for you. Just provide [me](https://mage2.pro/users/dmitry_fedyuk) an SSH access to your store's server. You can use [my public SSH key](https://mage2.pro/t/2092) for it.
+## How to install
+### 1. Free installation service
+Just order my [free installation service](https://mage2.pro/t/3585).
 
-### Self-installation 
-Follow the generic [installation instruction](https://mage2.pro/t/263). 
+### 2. Self-installation
+```
+composer require mage2pro/sales-sequence:*
+bin/magento setup:upgrade
+rm -rf pub/static/* && bin/magento setup:static-content:deploy
+rm -rf var/di var/generation && bin/magento setup:di:compile
+```
+If you have some problems while executing these commands, then check the [detailed instruction](https://mage2.pro/t/263).
+
+## Licensing
+It is a paid extension, not free.  
+You can use it for free for the testing puproses only.  
+Please read the [testing policy](https://mage2.pro/t/2590) before installation.
 
 ## Support
 - [The extension's **forum** branch](https://mage2.pro/c/extensions/sales-documents-numeration).
