@@ -1,6 +1,6 @@
 The «[**Sales Documents Numeration**](https://mage2.pro/c/extensions/sales-documents-numeration)» extension for Magento 2 allows you to use a custom numeration for the sales documents: orders, invoices, shipments, and credit memos.
 
-[**Demo video**](https://www.youtube.com/watch?v=alcoJyoby1M).
+**Demo video**: https://www.youtube.com/watch?v=alcoJyoby1M
 
 ## Screenshots
 ### 1. Custom order number
