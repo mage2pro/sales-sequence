@@ -24,11 +24,9 @@ class Manager extends Sb {
 	function aroundGetSequence(Sb $sb, \Closure $f, $entityType, $storeId) {
 		$this->type = $entityType;
 		$this->storeId = $storeId;
-		return !S::s()->enable($storeId) ? $f($entityType, $storeId) :
-			df_om()->create(Sequence::class, [
-				'meta' => df_sales_seq_meta($entityType, $storeId), 'pattern' => $this->pattern()
-			])
-		;
+		return !S::s()->enable($storeId) ? $f($entityType, $storeId) : df_create(Sequence::class, [
+			'meta' => df_sales_seq_meta($entityType, $storeId), 'pattern' => $this->pattern()
+		]);
 	}
 
 	/**
