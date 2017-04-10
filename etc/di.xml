@@ -3,19 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
 >
-	<!--
-		2016-01-29
-		Цель плагина — настройка форматирования номеров продажных документов.
-	-->
+	<!-- 2016-01-29 Цель плагина — настройка форматирования номеров продажных документов. -->
 	<type name='Magento\SalesSequence\Model\Manager'>
-		<plugin
-			name='Dfe\SalesSequence\Plugin\Model\Manager'
-			type='Dfe\SalesSequence\Plugin\Model\Manager'
-		/>
+		<plugin name='Dfe\SalesSequence\Plugin\Model\Manager' type='Dfe\SalesSequence\Plugin\Model\Manager'/>
 	</type>
-	<virtualType name='Dfe\SalesSequence\Ext' type='Df\Config\Ext'>
-		<arguments>
-			<argument name='name' xsi:type='string'>mage2pro/sales-sequence</argument>
-		</arguments>
-	</virtualType>
 </config>
