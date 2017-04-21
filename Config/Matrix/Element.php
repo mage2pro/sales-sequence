@@ -20,9 +20,9 @@ abstract class Element extends Hidden {
 	 * @see \Df\Framework\Form\ElementI::onFormInitialized()
 	 * @used-by \Df\Framework\Plugin\Data\Form\Element\AbstractElement::afterSetForm()
 	 */
-	function onFormInitialized() {
-		df_fe_init($this, __CLASS__, df_asset_third_party('Handsontable/main.css'), [
+	function onFormInitialized() {df_fe_init(
+		$this, __CLASS__, df_asset_third_party('Handsontable/main.css'), [
 			'columns' => $this->columns(), 'rows' => $this->rows()
-		], 'matrix');
-	}
+		], 'matrix'
+	);}
 }
