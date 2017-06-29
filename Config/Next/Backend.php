@@ -4,6 +4,7 @@ use Df\Config\Backend\Unusial\Model;
 use Df\Config\Backend as _Backend;
 /**
  * 2016-01-11
+ * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
  * @method mixed|null getValue()
  */
 class Backend extends Model {
@@ -73,13 +74,11 @@ class Backend extends Model {
 	 * 2016-01-11
 	 * @return int[][]
 	 */
-	private function nextNumbersFromDb() {
-		return array_map(function($storeId) {
-			return array_values(array_map(function($entityTypeId) use ($storeId) {
-				return df_sales_seq_next($entityTypeId, $storeId);
-			}, df_sales_entity_types()));
-		}, df_store_ids());
-	}
+	private function nextNumbersFromDb() {return array_map(function($storeId) {return
+		array_values(array_map(function($entityTypeId) use ($storeId) {return
+			df_sales_seq_next($entityTypeId, $storeId)
+		;}, df_sales_entity_types()));
+	}, df_store_ids());}
 
 	/**
 	 * 2016-01-26
