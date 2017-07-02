@@ -13,7 +13,6 @@
 			<group
 				id='documents_numeration'
 				translate='label'
-				type='text'
 				sortOrder='13'
 				showInDefault='1'
 				showInWebsite='1'
