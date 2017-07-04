@@ -12,23 +12,19 @@
 -->
 			<group
 				id='documents_numeration'
-				translate='label'
+				showInDefault='1' showInStore='1' showInWebsite='1'
 				sortOrder='13'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
+				translate='label'
 			>
 				<label>Documents Numeration</label>
 				<dfExtension>Dfe_SalesSequence</dfExtension>
 				<frontend_model>Df\Config\Fieldset</frontend_model>
 				<field
 					id='enable'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='1'
 					translate='label'
 					type='Df\Framework\Form\Element\Checkbox'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Enable?</label>
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -36,12 +32,10 @@
 				</field>
 				<field
 					id='needPad'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='2'
 					translate='label'
 					type='Df\Framework\Form\Element\Checkbox'
-					sortOrder='2'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Pad Numbers with Leading Zeros?</label>
 			<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -49,15 +43,13 @@
 					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
-					id='padLength'
-					translate='label'
-					type='Df\Framework\Form\Element\Select\Range'
 					dfMax='10'
 					dfMin='1'
+					id='padLength'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='3'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
+					type='Df\Framework\Form\Element\Select\Range'
 				>
 					<label>Numbers Length</label>
 					<comment><![CDATA[The minimum number of digits to display in the increment part of a sales document's number.<br/>The increment part is a document number without a prefix and suffix.<br/>A sales document's number will be padded with the leading zeros to the specified length.<br/>The default length is <code>9</code>, so the number <code>2189</code> is rendered as <code>000002189</code><br/>(<code>4</code> significant digits and <code>9 - 4 = 5</code> leading zeros).]]></comment>
@@ -68,12 +60,10 @@
 				</field>
 				<field
 					id='affix'
-					type='Dfe\SalesSequence\Config\Affix\Element'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='4'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
+					type='Dfe\SalesSequence\Config\Affix\Element'
 				>
 					<label><![CDATA[Prefix & Suffix]]></label>
 					<comment><![CDATA[You can use the following variables in a prefix/suffix: <table class='df-note'><tbody>
@@ -100,12 +90,10 @@
 				</field>
 				<field
 					id='next'
-					type='Dfe\SalesSequence\Config\Next\Element'
-					translate='label'
+					showInDefault='1' showInStore='0' showInWebsite='0'
 					sortOrder='5'
-					showInDefault='1'
-					showInWebsite='0'
-					showInStore='0'
+					translate='label'
+					type='Dfe\SalesSequence\Config\Next\Element'
 				>
 					<label>Next Numbers</label>
 					<comment><![CDATA[]]></comment>
