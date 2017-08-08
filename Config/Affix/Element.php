@@ -1,7 +1,8 @@
 <?php
 namespace Dfe\SalesSequence\Config\Affix;
-use Dfe\SalesSequence\Config\Matrix\Element as _Element;
-class Element extends _Element {
+// 2016-01-29
+/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
+class Element extends \Dfe\SalesSequence\Config\Matrix\Element {
 	/**
 	 * 2016-01-30
 	 * @override
@@ -9,7 +10,7 @@ class Element extends _Element {
 	 * @used-by \Dfe\SalesSequence\Config\Matrix\Element::onFormInitialized()
 	 * @return string[]
 	 */
-	protected function columns() {return ['Prefix', 'Suffix'];}
+	final protected function columns() {return ['Prefix', 'Suffix'];}
 
 	/**
 	 * 2016-01-29
@@ -22,5 +23,5 @@ class Element extends _Element {
 	 * http://docs.handsontable.com/0.20.2/Options.html#rowHeaders
 	 * @return string[]
 	 */
-	protected function rows() {return array_keys(df_sales_entity_types());}
+	final protected function rows() {return array_keys(df_sales_entity_types());}
 }

@@ -1,7 +1,11 @@
 <?php
 namespace Dfe\SalesSequence\Config\Matrix;
-use Df\Framework\Form\Element\Hidden;
-abstract class Element extends Hidden {
+/**
+ * 2016-01-29
+ * @see \Dfe\SalesSequence\Config\Affix\Element
+ * @see \Dfe\SalesSequence\Config\Next\Element
+ */
+abstract class Element extends \Df\Framework\Form\Element\Hidden {
 	/**
 	 * 2016-01-30
 	 * @return string[]
@@ -17,7 +21,7 @@ abstract class Element extends Hidden {
 	/**
 	 * 2016-01-29
 	 * @override
-	 * @see \Df\Framework\Form\ElementI::onFormInitialized()
+	 * @see \Df\Framework\Form\Element\Hidden::onFormInitialized()
 	 * @used-by \Df\Framework\Plugin\Data\Form\Element\AbstractElement::afterSetForm()
 	 */
 	function onFormInitialized() {df_fe_init(
