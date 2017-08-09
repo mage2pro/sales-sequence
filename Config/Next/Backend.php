@@ -12,6 +12,17 @@ class Backend extends Model {
 	 * 2016-01-14
 	 * @override
 	 * @see \Df\Config\Backend\Unusial\Model::afterLoad()
+	 * @used-by \Magento\Config\Block\System\Config\Form::getFieldData()
+	 *		if ($field->hasBackendModel()) {
+	 *			$backendModel = $field->getBackendModel();
+	 *			$backendModel->setPath($path)
+	 *				->setValue($data)
+	 *				->setWebsite($this->getWebsiteCode())
+	 *				->setStore($this->getStoreCode())
+	 *				->afterLoad();
+	 *			$data = $backendModel->getValue();
+	 *		}
+	 * https://github.com/magento/magento2/blob/2.2.0-RC1.8/app/code/Magento/Config/Block/System/Config/Form.php#L436-L444
 	 * @return $this
 	 */
 	function afterLoad() {
@@ -21,6 +32,8 @@ class Backend extends Model {
 
 	/**
 	 * 2016-01-26
+	 * 2017-08-09 It looks like it is never used.  
+	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
 	 * @override
 	 * @see \Df\Config\Backend\Unusial\Model::delete()
 	 * @return $this
