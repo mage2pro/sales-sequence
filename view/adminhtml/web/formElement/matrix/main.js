@@ -27,13 +27,13 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 						/**
 						 * 2016-01-10
 						 * Пример массива с данными для Handsontable из 3 колонок и 5 строк:
-						 [
-						 	["тест","2","3"]
-						 	,["4","5","6"]
-						 	,["","тест","12"]
-						 	,["7","999","9"]
-						 	,["88888",null,null]
-						 ]
+						 *	 [
+						 *		["тест","2","3"]
+						 *		,["4","5","6"]
+						 *		,["","тест","12"]
+						 *		,["7","999","9"]
+						 *		,["88888",null,null]
+						 *	 ]
 						 */
 						var numRows = config.rows.length;
 						var numColumns = config.columns.length;
@@ -44,8 +44,7 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 					}
 					return result;
 				}()
-			// 2015-12-16
-			// http://docs.handsontable.com/0.20.2/Options.html#colHeaders
+			// 2015-12-16 http://docs.handsontable.com/0.20.2/Options.html#colHeaders
 			,colHeaders: config.columns
 			// 2015-12-16
 			// Похоже, мы нуждаемся в этой опции,
@@ -61,8 +60,7 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 			// http://docs.handsontable.com/0.20.2/Options.html#stretchH
 			// https://code.dmitry-fedyuk.com/discourse/df-table/blob/330c130a98a4e4bc26ef855ffcda401726ba1b33/assets/javascripts/models/editor.js.es6#L41
 			,stretchH: 'all'
-			// 2016-01-10
-			// http://docs.handsontable.com/0.20.2/Options.html#colWidths
+			// 2016-01-10 http://docs.handsontable.com/0.20.2/Options.html#colWidths
 			,colWidths: '25%'
 			,className: 'htMiddle htCenter'
 			// 2016-01-11
