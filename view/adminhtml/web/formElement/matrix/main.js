@@ -96,7 +96,7 @@ define(['jquery', 'Df_Core/Handsontable', 'domReady!'], function($) {return (
 			var $form = $element.closest('form');
 			/**
 			 * 2015-12-16
-			 * По аналогии с https://code.dmitry-fedyuk.com/m2e/markdown/blob/d030a44bfe75765d54d68acf106e2fbb9bd66b4c/view/adminhtml/web/main.js#L364
+			 * By analogy with https://github.com/mage2pro/markdown/blob/d030a44b/view/adminhtml/web/main.js#L364
 			 */
 			$form.bind('beforeSubmit', function() {
 				$element.val(JSON.stringify($table.getData()));
