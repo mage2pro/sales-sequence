@@ -4,10 +4,7 @@ use Dfe\SalesSequence\Settings as S;
 use Magento\SalesSequence\Model\Manager as Sb;
 use Magento\SalesSequence\Model\Sequence;
 class Manager extends Sb {
-	/**
-	 * 2016-01-29
-	 * Потрясающая техника.
-	 */
+	/** 2016-01-29 Потрясающая техника. */
 	function __construct() {}
 
 	/**
@@ -45,8 +42,7 @@ class Manager extends Sb {
 	 * @return string
 	 */
 	private function pattern() {
-		/** @var string $pad */
-		$pad = !S::s()->needPad($this->storeId) ? '' : '0' . S::s()->padLength();
+		/** @var string $pad */ $pad = !S::s()->needPad($this->storeId) ? '' : '0' . S::s()->padLength();
 		return "%s{$this->affix(S::PREFIX)}%{$pad}d{$this->affix(S::SUFFIX)}%s";
 	}
 
