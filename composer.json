@@ -1,7 +1,7 @@
 {
 	"name": "mage2pro/sales-sequence"
 	,"version": "1.0.14"
-	,"description": "The «Sales Documents Numeration» extension for Magento 2."
+	,"description": "The «Sales Documents Numeration» extension for Magento 2"
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/c/extensions/sales-documents-numeration"
 	,"license": "proprietary"
