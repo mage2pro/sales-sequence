@@ -53,28 +53,17 @@ class Backend extends Model {
 	 * @return $this
 	 */
 	function afterCommitCallback() {
-		/** @var int[][] $valuesFromUi */
-		$valuesFromUi = df_json_decode($this->getValue());
-		/** @var int[][] $valuesFromDb */
-		$valuesFromDb = $this->nextNumbersFromDb();
-		/** @var int[] $storeIds */
-		$storeIds = df_store_ids();
-		/** @var int $numStores */
-		$numStores = count($storeIds);
-		/** @var int[] $types */
-		// 2016-01-27
-		// Нам нужно, чтобы у массива были целочисленные ключи.
-		$types = array_values(df_sales_entity_types());
-		/** @var int $numTypes */
-		$numTypes = count($types);
-		for ($storeIndex = 0; $storeIndex < $numStores; $storeIndex++) {
-			/** @var int $storeIndex */
-			for ($typeIndex = 0; $typeIndex < $numTypes; $typeIndex++) {
-				/** @var int $typeIndex */
-				/** @var int $valueFromUi */
-				$valueFromUi = (int)$valuesFromUi[$storeIndex][$typeIndex];
-				/** @var int $valueFromDb */
-				$valueFromDb = (int)$valuesFromDb[$storeIndex][$typeIndex];
+		$valuesFromUi = df_json_decode($this->getValue()); /** @var int[][] $valuesFromUi */
+		$valuesFromDb = $this->nextNumbersFromDb(); /** @var int[][] $valuesFromDb */
+		$storeIds = df_store_ids(); /** @var int[] $storeIds */
+		$numStores = count($storeIds); /** @var int $numStores */
+		// 2016-01-27 Нам нужно, чтобы у массива были целочисленные ключи.
+		$types = array_values(df_sales_entity_types()); /** @var int[] $types */
+		$numTypes = count($types); /** @var int $numTypes */
+		for ($storeIndex = 0; $storeIndex < $numStores; $storeIndex++) { /** @var int $storeIndex */
+			for ($typeIndex = 0; $typeIndex < $numTypes; $typeIndex++) { /** @var int $typeIndex */
+				$valueFromUi = (int)$valuesFromUi[$storeIndex][$typeIndex]; /** @var int $valueFromUi */
+				$valueFromDb = (int)$valuesFromDb[$storeIndex][$typeIndex]; /** @var int $valueFromDb */
 				if ($valueFromUi !== $valueFromDb) {
 					$this->updateNextNumber($storeIds[$storeIndex], $types[$typeIndex], $valueFromUi);
 				}
