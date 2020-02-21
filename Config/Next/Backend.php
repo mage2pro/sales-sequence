@@ -25,10 +25,7 @@ class Backend extends Model {
 	 * https://github.com/magento/magento2/blob/2.2.0-RC1.8/app/code/Magento/Config/Block/System/Config/Form.php#L436-L444
 	 * @return $this
 	 */
-	function afterLoad() {
-		$this->setValue(df_json_encode($this->nextNumbersFromDb()));
-		return $this;
-	}
+	function afterLoad() {return $this->setValue(df_json_encode($this->nextNumbersFromDb()));}
 
 	/**
 	 * 2016-01-26
