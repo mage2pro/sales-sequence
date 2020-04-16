@@ -88,7 +88,7 @@ So the `sortOrder` value is 1920. -->
 		<tr>
 			<td>{a date expression}</td>
 			<td>It will be replaced with the current date.
-			<br/>Use any expression supported by <a href="http://php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP <code>date()</code></a> function.
+			<br/>Use any expression supported by <a href="https://php.net/manual/function.date.php#refsect1-function.date-parameters">PHP <code>date()</code></a> function.
 			<br/>Examples:
 			<br/>{y-m} => <i>16-01</i>
 			<br/>{Y-m} => <i>2016-01</i>
