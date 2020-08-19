@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\SalesSequence\Config\Next;
-// 2016-01-29
+# 2016-01-29
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Element extends \Dfe\SalesSequence\Config\Matrix\Element {
 	/**

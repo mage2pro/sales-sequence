@@ -54,7 +54,7 @@ class Backend extends Model {
 		$valuesFromDb = $this->nextNumbersFromDb(); /** @var int[][] $valuesFromDb */
 		$storeIds = df_store_ids(); /** @var int[] $storeIds */
 		$numStores = count($storeIds); /** @var int $numStores */
-		// 2016-01-27 Нам нужно, чтобы у массива были целочисленные ключи.
+		# 2016-01-27 Нам нужно, чтобы у массива были целочисленные ключи.
 		$types = array_values(df_sales_entity_types()); /** @var int[] $types */
 		$numTypes = count($types); /** @var int $numTypes */
 		for ($storeIndex = 0; $storeIndex < $numStores; $storeIndex++) { /** @var int $storeIndex */
