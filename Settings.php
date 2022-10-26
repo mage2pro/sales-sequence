@@ -8,9 +8,8 @@ final class Settings extends \Df\Config\Settings {
 	 * @param string $type
 	 * @param int $affixId
 	 * @param null|string|int|S $s [optional]
-	 * @return string
 	 */
-	function affix($type, $affixId, $s = null) {return df_nts($this->_matrix(
+	function affix($type, $affixId, $s = null):string {return df_nts($this->_matrix(
 		df_sales_entity_type_index($type), $affixId, __FUNCTION__, $s
 	));}
 
@@ -34,9 +33,8 @@ final class Settings extends \Df\Config\Settings {
 	 * @override
 	 * @see \Df\Config\Settings::prefix()
 	 * @used-by \Df\Config\Settings::v()
-	 * @return string
 	 */
-	protected function prefix() {return 'df_sales/documents_numeration';}
+	protected function prefix():string {return 'df_sales/documents_numeration';}
 
 	/**
 	 * 2016-01-30

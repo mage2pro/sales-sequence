@@ -1,7 +1,6 @@
 <?php
 namespace Dfe\SalesSequence\Config\Next;
 use Df\Config\Backend\Unusial\Model;
-use Df\Config\Backend as _Backend;
 /**
  * 2016-01-11
  * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
@@ -23,9 +22,8 @@ class Backend extends Model {
 	 *			$data = $backendModel->getValue();
 	 *		}
 	 * https://github.com/magento/magento2/blob/2.2.0-RC1.8/app/code/Magento/Config/Block/System/Config/Form.php#L436-L444
-	 * @return $this
 	 */
-	function afterLoad() {return $this->setValue(df_json_encode($this->nextNumbersFromDb()));}
+	function afterLoad():self {return $this->setValue(df_json_encode($this->nextNumbersFromDb()));}
 
 	/**
 	 * 2016-01-26
@@ -33,9 +31,8 @@ class Backend extends Model {
 	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
 	 * @override
 	 * @see \Df\Config\Backend\Unusial\Model::delete()
-	 * @return $this
 	 */
-	function delete() {return $this;}
+	function delete():self {return $this;}
 
 	/**
 	 * 2016-01-11
@@ -47,9 +44,8 @@ class Backend extends Model {
 	 * @override
 	 * @see \Magento\Framework\Model\AbstractModel::afterCommitCallback()
 	 * @used-by \Df\Config\Backend\Unusial\Model::save()
-	 * @return $this
 	 */
-	function afterCommitCallback() {
+	function afterCommitCallback():self {
 		$valuesFromUi = df_json_decode($this->getValue()); /** @var int[][] $valuesFromUi */
 		$valuesFromDb = $this->nextNumbersFromDb(); /** @var int[][] $valuesFromDb */
 		$storeIds = df_store_ids(); /** @var int[] $storeIds */
