@@ -78,6 +78,7 @@ class Backend extends Model {
 
 	/**
 	 * 2016-01-26
+	 * @used-by self::afterCommitCallback()
 	 */
 	private function updateNextNumber(int $storeId, string $entityTypeCode, int $nextNumber):void {
 		$table = df_sales_seq_meta($entityTypeCode, $storeId)->getSequenceTable(); /** @var string $table */
