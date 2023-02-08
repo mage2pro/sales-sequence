@@ -23,5 +23,5 @@ class Element extends \Dfe\SalesSequence\Config\Matrix\Element {
 	 * http://docs.handsontable.com/0.20.2/Options.html#rowHeaders
 	 * @return string[]
 	 */
-	final protected function rows() {return array_keys(df_sales_entity_types());}
+	final protected function rows():array {return array_keys(df_sales_entity_types());}
 }
