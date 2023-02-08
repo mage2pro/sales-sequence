@@ -10,7 +10,7 @@ class Element extends \Dfe\SalesSequence\Config\Matrix\Element {
 	 * @used-by \Dfe\SalesSequence\Config\Matrix\Element::onFormInitialized()
 	 * @return string[]
 	 */
-	final protected function columns() {return ['Prefix', 'Suffix'];}
+	final protected function columns():array {return ['Prefix', 'Suffix'];}
 
 	/**
 	 * 2016-01-29
