@@ -24,6 +24,7 @@ class Manager extends Sb {
 
 	/**
 	 * 2016-01-30
+	 * @used-by self::pattern()
 	 */
 	private function affix(int $affixId):string {return df_var(
 		S::s()->affix($this->type, $affixId, $this->storeId), [
