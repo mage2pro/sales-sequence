@@ -12,7 +12,6 @@ class Manager extends Sb {
 	 * Цель перекрытия — настройка форматирования номеров продажных документов.
 	 * @see \Magento\SalesSequence\Model\Manager::getSequence()
 	 * https://github.com/magento/magento2/blob/720667e/app/code/Magento/SalesSequence/Model/Manager.php#L37-L54
-	 * @param Sb $sb
 	 * @param \Closure $f
 	 * @param string $entityType
 	 * @param int $storeId
