@@ -5,10 +5,9 @@ use Magento\Framework\App\ScopeInterface as S;
 final class Settings extends \Df\Config\Settings {
 	/**
 	 * 2016-01-29 «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
-	 * @param int $affixId
 	 * @param null|string|int|S $s [optional]
 	 */
-	function affix(string $type, $affixId, $s = null):string {return df_nts($this->_matrix(
+	function affix(string $type, int $affixId, $s = null):string {return df_nts($this->_matrix(
 		df_sales_entity_type_index($type), $affixId, __FUNCTION__, $s
 	));}
 
