@@ -20,7 +20,7 @@ abstract class Element extends \Df\Framework\Form\Element\Hidden {
 	 * @see \Dfe\SalesSequence\Config\Next\Element::rows()
 	 * @return string[]
 	 */
-	abstract protected function rows();
+	abstract protected function rows():array;
 
 	/**
 	 * 2016-01-29
