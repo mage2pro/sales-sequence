@@ -10,7 +10,7 @@ abstract class Element extends \Df\Framework\Form\Element\Hidden {
 	 * 2016-01-30
 	 * @return string[]
 	 */
-	abstract protected function columns();
+	abstract protected function columns():array;
 
 	/**
 	 * 2016-01-29
