@@ -78,11 +78,10 @@ class Backend extends Model {
 
 	/**
 	 * 2016-01-26
-	 * @param int $storeId
 	 * @param string $entityTypeCode
 	 * @param int $nextNumber
 	 */
-	private function updateNextNumber($storeId, $entityTypeCode, $nextNumber) {
+	private function updateNextNumber(int $storeId, $entityTypeCode, $nextNumber) {
 		$table = df_sales_seq_meta($entityTypeCode, $storeId)->getSequenceTable(); /** @var string $table */
 		df_next_increment_set($table, max(df_fetch_col_max($table, 'sequence_value'), $nextNumber));
 	}
