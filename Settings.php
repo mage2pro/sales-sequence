@@ -22,9 +22,8 @@ final class Settings extends \Df\Config\Settings {
 	 * 2016-01-29
 	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
 	 * @param null|string|int|S $s [optional]
-	 * @return int
 	 */
-	function padLength($s = null) {return $this->i(null, $s);}
+	function padLength($s = null):int {return $this->i(null, $s);}
 
 	/**
 	 * @override
