@@ -34,6 +34,7 @@ class Manager extends Sb {
 
 	/**
 	 * 2016-01-29
+	 * @used-by self::aroundGetSequence()
 	 */
 	private function pattern():string {
 		/** @var string $pad */ $pad = !S::s()->needPad($this->storeId) ? '' : '0' . S::s()->padLength();
