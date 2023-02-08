@@ -8,6 +8,8 @@ namespace Dfe\SalesSequence\Config\Matrix;
 abstract class Element extends \Df\Framework\Form\Element\Hidden {
 	/**
 	 * 2016-01-30
+	 * @see \Dfe\SalesSequence\Config\Affix\Element::columns()
+	 * @see \Dfe\SalesSequence\Config\Next\Element::columns()
 	 * @return string[]
 	 */
 	abstract protected function columns():array;
