@@ -71,7 +71,7 @@ class Backend extends Model {
 	 */
 	private function nextNumbersFromDb():array {return array_map(function($storeId) {return
 		array_values(array_map(
-			function(string $entityTypeId) use($storeId) {return df_sales_seq_next($entityTypeId, $storeId);}
+			function(string $entityTypeId) use($storeId):string {return df_sales_seq_next($entityTypeId, $storeId);}
 			,df_sales_entity_types()
 		));
 	}, df_store_ids());}
