@@ -16,6 +16,8 @@ abstract class Element extends \Df\Framework\Form\Element\Hidden {
 
 	/**
 	 * 2016-01-29
+	 * @see \Dfe\SalesSequence\Config\Affix\Element::rows()
+	 * @see \Dfe\SalesSequence\Config\Next\Element::rows()
 	 * @return string[]
 	 */
 	abstract protected function rows();
