@@ -67,6 +67,7 @@ class Backend extends Model {
 
 	/**
 	 * 2016-01-11
+	 * @used-by self::afterLoad()
 	 * @return int[][]
 	 */
 	private function nextNumbersFromDb():array {return array_map(function($storeId):array {return array_values(array_map(
