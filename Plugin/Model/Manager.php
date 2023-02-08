@@ -34,9 +34,8 @@ class Manager extends Sb {
 
 	/**
 	 * 2016-01-29
-	 * @return string
 	 */
-	private function pattern() {
+	private function pattern():string {
 		/** @var string $pad */ $pad = !S::s()->needPad($this->storeId) ? '' : '0' . S::s()->padLength();
 		return "%s{$this->affix(S::PREFIX)}%{$pad}d{$this->affix(S::SUFFIX)}%s";
 	}
