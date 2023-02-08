@@ -10,7 +10,7 @@ class Element extends \Dfe\SalesSequence\Config\Matrix\Element {
 	 * @used-by \Dfe\SalesSequence\Config\Matrix\Element::onFormInitialized()
 	 * @return string[]
 	 */
-	final protected function columns() {return array_keys(df_sales_entity_types());}
+	final protected function columns():array {return array_keys(df_sales_entity_types());}
 
 	/**
 	 * 2016-01-29
