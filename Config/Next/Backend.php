@@ -69,12 +69,10 @@ class Backend extends Model {
 	 * 2016-01-11
 	 * @return int[][]
 	 */
-	private function nextNumbersFromDb():array {return array_map(function($storeId) {return
-		array_values(array_map(
-			function(string $entityTypeId) use($storeId):string {return df_sales_seq_next($entityTypeId, $storeId);}
-			,df_sales_entity_types()
-		));
-	}, df_store_ids());}
+	private function nextNumbersFromDb():array {return array_map(function($storeId):array {return array_values(array_map(
+		function(string $entityTypeId) use($storeId):string {return df_sales_seq_next($entityTypeId, $storeId);}
+		,df_sales_entity_types()
+	));}, df_store_ids());}
 
 	/**
 	 * 2016-01-26
