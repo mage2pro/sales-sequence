@@ -24,10 +24,8 @@ class Manager extends Sb {
 
 	/**
 	 * 2016-01-30
-	 * @param int $affixId
-	 * @return string
 	 */
-	private function affix(int $affixId) {return df_var(
+	private function affix(int $affixId):string {return df_var(
 		S::s()->affix($this->type, $affixId, $this->storeId), [
 			'STORE-ID' => $this->storeId, 'STORE-CODE' => df_store_code($this->storeId)
 		], function($variable) {return date($variable);}
