@@ -67,6 +67,7 @@ class Backend extends Model {
 
 	/**
 	 * 2016-01-11
+	 * @used-by self::afterCommitCallback()
 	 * @used-by self::afterLoad()
 	 * @return int[][]
 	 */
