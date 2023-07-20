@@ -15,7 +15,7 @@ final class Settings extends \Df\Config\Settings {
 	 * 2016-01-29 «Mage2.PRO» → «Sales» → «Documents Numeration» → «Pad Numbers with Leading Zeros?»
 	 * 2023-07-20
 	 * «Df\Config\Settings::b(): Argument #1 ($k) must be of type string, null given»:
-	 * https://github.com/mage2pro/yandex-kassa/issues/7
+	 * https://github.com/mage2pro/core/issues/240
 	 * @param null|string|int|S $s [optional]
 	 */
 	function needPad($s = null):bool {return $this->b('', $s);}
