@@ -21,11 +21,10 @@ final class Settings extends \Df\Config\Settings {
 	function needPad($s = null):bool {return $this->b('', $s);}
 
 	/**
-	 * 2016-01-29
-	 * «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
+	 * 2016-01-29 «Mage2.PRO» → «Sales» → «Documents Numeration» → «Numbers Length»
 	 * @param null|string|int|S $s [optional]
 	 */
-	function padLength($s = null):int {return $this->i(null, $s);}
+	function padLength($s = null):int {return $this->i('', $s);}
 
 	/**
 	 * @override
