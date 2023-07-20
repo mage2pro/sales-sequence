@@ -35,13 +35,13 @@ final class Settings extends \Df\Config\Settings {
 
 	/**
 	 * 2016-01-30
-	 * @used-by \Dfe\SalesSequence\Settings::affix()
+	 * @used-by self::affix()
 	 * @used-by \Dfe\SalesSequence\Plugin\Model\Manager::pattern()
 	 */
 	const PREFIX = 0;
 	/**
 	 * 2016-01-30
-	 * @used-by \Dfe\SalesSequence\Settings::affix()
+	 * @used-by self::affix()
 	 * @used-by \Dfe\SalesSequence\Plugin\Model\Manager::pattern()
 	 */
 	const SUFFIX = 1;
