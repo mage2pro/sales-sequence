@@ -4,7 +4,10 @@ use Dfe\SalesSequence\Settings as S;
 use Magento\Framework\DB\Sequence\SequenceInterface as ISequence;
 use Magento\SalesSequence\Model\Manager as Sb;
 use Magento\SalesSequence\Model\Sequence;
-class Manager extends Sb {
+# 2023-08-06
+# "Prevent interceptors generation for the plugins extended from interceptable classes":
+# https://github.com/mage2pro/core/issues/327
+class Manager extends Sb implements \Magento\Framework\ObjectManager\NoninterceptableInterface {
 	/** 2016-01-29 Потрясающая техника. */
 	function __construct() {}
 
